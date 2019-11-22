@@ -9,6 +9,13 @@ Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 
+Vue.config.ignoredElements = [
+  'custom-component'
+];
+
+window.Vue = Vue;
+
 new Vue({
+  Vuetify,
   render: h => h(App),
 }).$mount('#app')
