@@ -30,17 +30,33 @@
 export default {
   name: 'HelloWorld',
   data: () => ({
-      selectItems: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
-    })
+    selectItems: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
+  }),
+  mounted() {
+    var vuetifyThemeCss = document.getElementById('vuetify-theme-stylesheet');
+
+    var template = document.querySelector('custom-component');
+    if (template != null)
+    {
+      var shadowDomTheme = document.createElement('style');
+      shadowDomTheme.innerHTML = vuetifyThemeCss.innerHTML;
+
+      template.shadowRoot.appendChild(shadowDomTheme);
+    }
+  }
 }
 </script>
 
 <style scoped>
+@import '~vuetify/dist/vuetify.min.css';
+@import '~material-design-icons-iconfont/dist/material-design-icons.css';
+
 .hello {
   width: 50%;
   margin: 60px auto 0;
+  padding: 20px;
   text-align: center;
-  background-color: #c0c0c0;
+  background-color: #cccccc;
 }
 .v-btn {
   margin: 0 10px;

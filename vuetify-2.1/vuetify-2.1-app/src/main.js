@@ -4,6 +4,12 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+Vue.config.ignoredElements = [
+  'custom-component'
+];
+
+window.Vue = Vue;
+
 new Vue({
   vuetify,
   render: h => h(App)
