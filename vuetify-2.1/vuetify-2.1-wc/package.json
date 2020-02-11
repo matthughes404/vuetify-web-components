@@ -5,7 +5,7 @@
   "scripts": {
     "build:app": "vue-cli-service build --target app",
     "serve:app": "vue-cli-service serve",
-    "build:wc": "vue-cli-service build --target wc --name custom-component './src/components/*.vue'",
+    "build:wc": "vue-cli-service build --target wc --name custom-component",
     "serve:wc": "serve -l 8888 dist/",
     "lint": "vue-cli-service lint"
   },

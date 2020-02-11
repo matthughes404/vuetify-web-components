@@ -5,7 +5,7 @@
       <h1>This is a Vue.js Web Component, with Vuetify 2.1.11</h1>
       <br />
       <p>
-        <v-text-field label="Regular Text Field" placeholder="Placeholder Text"></v-text-field>        
+        <v-text-field label="Regular Text Field" placeholder="Placeholder Text"></v-text-field>
         <v-select :items="selectItems" label="Standard Select Field"></v-select>
         <br />
         <v-btn color="success">Success Button</v-btn>
@@ -27,8 +27,16 @@
 </template>
 
 <script>
+import {VTextField, VSelect, VBtn, VIcon} from 'vuetify/lib'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    VTextField,
+    VSelect,
+    VBtn,
+    VIcon,
+  },
   data: () => ({
     selectItems: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
   }),
@@ -48,8 +56,7 @@ export default {
 </script>
 
 <style scoped>
-@import '~vuetify/dist/vuetify.min.css';
-@import '~material-design-icons-iconfont/dist/material-design-icons.css';
+
 
 .hello {
   width: 50%;
