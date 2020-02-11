@@ -5,7 +5,7 @@
       <h1>Welcome to Your Vue.js App, with Vuetify 2.1.11</h1>
       <br />
       <p>
-        <v-text-field label="Regular Text Field" placeholder="Placeholder Text"></v-text-field>        
+        <v-text-field label="Regular Text Field" placeholder="Placeholder Text"></v-text-field>
         <v-select :items="selectItems" label="Standard Select Field"></v-select>
         <br />
         <v-btn color="success">Success Button</v-btn>

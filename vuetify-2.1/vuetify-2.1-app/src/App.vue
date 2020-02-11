@@ -21,7 +21,7 @@ export default {
       componentScript.setAttribute('id', componentScriptID);
       componentScript.setAttribute(
         'src',
-        `//localhost:8888/custom-component.js`
+        `http://127.0.0.1:5501/vuetify-2.1/vuetify-2.1-wc/dist/custom-component.js`
       );
       componentScript.async = true;
       document.head.appendChild(componentScript);
